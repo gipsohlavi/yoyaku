@@ -1,0 +1,422 @@
+ :root {
+      --bg: #0d0d0d;
+      --text: #eee;
+      --accent: #d1bfa3;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --shadow: rgba(0, 0, 0, 0.5);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: url('../images/4888049_s.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      margin-top: 70px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      color: #fff;
+      margin-bottom: 0.5em;
+    }
+
+    header p {
+      color: #ddd;
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 60px;
+      color: var(--accent);
+    }
+
+
+    /* --- ナビゲーション --- */
+    .main-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(13, 13, 13, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .nav-logo a,.nav-logo a:hover,.nav-logo a:visited{
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links .reservation-button {
+      color: black;
+    }
+
+    .nav-links li a:hover {
+      color: var(--accent);
+    }
+
+
+/* 予約関連 */
+    .reserve-section  select{
+      font-family: 'Playfair Display', serif;
+      margin-left: 10px;
+      color: #000;
+      font-size: large;
+    }
+
+    .reserve-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--accent);
+    }
+
+    .reserve-box button {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      width: 120px;
+      border-radius: 10px 10px 10px 10px;
+      color:#000;
+      background-color: var(--accent);
+      align-items: center;
+    }
+
+    .reserve-button{
+      display: flex;
+      justify-content: space-between;
+      margin: 2.5rem 0 2.5rem 1.5rem;
+    }
+    /* --カレンダー-- */
+    .calender a {
+        text-decoration: none;
+    }
+    .calender table {
+        color:#000;
+        background-color: #ffffffee;
+        border-color: #d1bfa3;
+        border-width: 0.5rem;
+        table-layout: fixed;
+    }
+    .calender th {
+      height: 30px;
+      text-align: center;
+    }
+    .calender td {
+      height: 100px;
+    }
+    .select {
+      background: blue;
+    }
+    .today {
+      background: orange !important;
+    }
+    .holiday {
+      color: red;
+      background: #e9e9eee5;
+    }
+    .none {
+      background: #e9e9eee5 !important;
+    }
+    .calender-date {
+      width:12%;
+    }
+    .day-reserve h3 {
+      margin-left:6rem;
+    }
+    .day-reserve table {
+      margin:auto;
+      width: 90%;
+    }
+    .day-reserve td {
+      height: auto;
+      text-align: center;
+    }
+    .day-reserve button {
+      height: auto;
+      width: 100%;
+      border: transparent;
+      background: transparent;
+    }
+
+    .day-reserve th,
+    .day-reserve td {
+      color:#000;
+    }
+
+    .sunday  {
+      color:red !important;
+    }
+    
+    .saturday {
+      color:blue!important;
+    }
+
+    .reserve-form {
+      width: 75%;
+      margin: auto;
+    }
+
+    /* --- 予約情報入力確認 --- */
+
+    .reserve-input input,
+    .reserve-input textarea{
+      margin-left: 10px;
+      color:#000;
+    }
+
+    .reserve-input button {
+      margin-left: -1.5rem;
+    }
+
+    .inputname {
+      width: 40%;
+      vertical-align: middle !important;
+    }
+
+    .r-text {
+      text-align:right;
+      margin-left:20%;
+    }
+    .l-text {
+      width:80%;
+      float:left;
+    }
+
+
+    /* --- 予約確認 --- */
+
+    .reserve-check {
+      margin-top: 100px ;
+    }
+
+    .reserve-check div {
+      width: 500px;
+      margin: auto ;
+    }
+
+    .reservecheck-button {
+      margin-top: 100px !important;
+      margin-right: 100% !important;
+    }
+
+    .reservecheck-button div{
+      width: 100% !important;
+    }
+
+    .reservecheck-button button{
+      margin-right: 50px;
+    }
+
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+      }
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .menu-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 8px 20px var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.03);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .menu-content {
+      padding: 20px;
+      font-size: 1.1rem;
+    }
+
+    .price-tag {
+      margin-top: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .concept-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .concept-section img {
+      width: 100%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .concept-box {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      color: #ccc;
+      font-size: 1.05rem;
+      line-height: 2;
+    }
+
+    .concept-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .info-section {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .info-text {
+      flex: 1 1 300px;
+      font-size: 1.1em;
+      line-height: 2;
+    }
+
+    .info-map {
+      flex: 1 1 500px;
+    }
+
+    .info-map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .centered {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .reservation-button {
+      font-family: 'Playfair Display', serif;
+      background: #d1bfa3;
+      color: #111;
+      padding: 1em 2.5em;
+      text-decoration: none;
+      border-radius: var(--radius);
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .reservation-button:hover {
+      background: #eee;
+      color: #5f8370;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #000;
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
