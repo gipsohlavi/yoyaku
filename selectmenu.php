@@ -22,7 +22,9 @@
             $sql = $db->query('SELECT * FROM menu');
             $sql->execute();
             foreach ($sql as $row) {
-              echo '<option value="'.$row['menu_id'].'">&nbsp;'.$row['menu_name'].' ----------------------'. number_format((int)$row['kingaku']).'円</option>';
+              echo '<option value="'.$row['menu_id'].'">
+                &nbsp;'.$row['menu_name'].' ----------------------'. 
+                number_format((int)$row['kingaku']).'円</option>';
             }
             ?>
           </select>
